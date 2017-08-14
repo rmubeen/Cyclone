@@ -1,0 +1,203 @@
+[   30.807694] NOFEL: Assigned id: 1 
+[  350.713355] NOFEL: Assigned id: 2 
+[  350.929267] NOFEL 2 ID: 2
+[  351.065469] NOFEL 2 ID: 2
+[  351.175447] NOFEL 2 ID: 2
+[  351.285704] NOFEL 2 ID: 2
+[  353.566725] NOFEL 2 ID: 2
+[  353.567645] NOFEL 2 ID: 2
+[  353.567768] NOFEL 2 ID: 2
+[  353.608116] NOFEL 2 ID: 2
+[  353.632680] NOFEL 2 ID: 2
+[  353.648557] NOFEL 2 ID: 2
+[  353.672649] NOFEL 2 ID: 2
+[  353.675730] NOFEL 2 ID: 2
+[  353.696685] NOFEL 2 ID: 2
+[  353.697655] NOFEL 2 ID: 2
+[  353.712689] NOFEL 2 ID: 2
+[  353.714707] NOFEL 2 ID: 2
+[  847.258535] NOFEL: Assigned id: 3 
+[  870.054388] NOFEL: in Request lists, from id: 3
+[  870.054393] NOFEL: KVM_REQ_MMU_RELOADNOFEL: __kvm_migrate_timers(vcpu)NOFEL: kvm_gen_update_masterclock(vcpu->kvm)NOFEL: kvm_gen_kvmclock_update(vcpu)NOFEL: r = kvm_guest_time_update(vcpu)NOFEL: kvm_x86_ops->tlb_flush(vcpu)NOFEL: record_steal_time(vcpu)NOFEL: vcpu_scan_ioapic(vcpu)NOFEL: KVM_REQ_EVENTNOFEL: in Request lists, from id: 3
+[  870.151955] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  870.158477] NOFEL: KVM_REQ_EVENTNOFEL: in Request lists, from id: 3
+[  870.346471] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  870.354502] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  870.398300] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  870.974799] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  871.354876] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  871.984760] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  872.351288] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  872.355291] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  872.679434] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  872.953574] NOFEL: Assigned id: 4 
+[  873.355717] NOFEL: in Request lists, from id: 3
+[  873.355721] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  873.503771] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  874.356129] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  875.356543] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  876.356961] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  876.360959] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  876.681091] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  877.357385] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  878.357798] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  878.365793] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  879.358214] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  879.476312] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  880.358633] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  880.370633] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  880.682762] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  881.359060] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  882.359475] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  882.375470] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  883.359916] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  884.360301] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  884.380309] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  884.388307] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  884.684431] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  885.360716] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  886.361135] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  886.385145] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  886.979452] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  887.361551] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  888.361969] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  888.389977] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  888.686101] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  889.362387] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  890.362812] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  890.394817] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  891.363221] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  892.363640] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  892.399652] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  892.687771] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  893.364062] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  894.364478] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  894.404487] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  894.474074] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  895.292891] NOFEL: in Request lists, from id: 4
+[  895.292893] NOFEL: KVM_REQ_MMU_RELOADNOFEL: __kvm_migrate_timers(vcpu)NOFEL: kvm_gen_update_masterclock(vcpu->kvm)NOFEL: kvm_gen_kvmclock_update(vcpu)NOFEL: r = kvm_guest_time_update(vcpu)NOFEL: kvm_x86_ops->tlb_flush(vcpu)NOFEL: record_steal_time(vcpu)NOFEL: vcpu_scan_ioapic(vcpu)NOFEL: KVM_REQ_EVENTNOFEL: in Request lists, from id: 4
+[  895.342073] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.342097] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.342506] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.344378] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.344453] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.344481] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.344940] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.351602] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.352004] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.352551] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.360372] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.364893] NOFEL: KVM_REQ_EVENT
+[  895.364906] NOFEL: in Request lists, from id: 3
+[  895.364908] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  895.383851] NOFEL: in Request lists, from id: 4
+[  895.383855] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.400517] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.400917] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.449009] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  895.452925] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.045399] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.045642] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.185306] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.343800] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.345889] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  896.353247] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  896.365317] NOFEL: in Request lists, from id: 3
+[  896.365320] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  896.401322] NOFEL: in Request lists, from id: 4
+[  896.401324] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  896.409325] NOFEL: in Request lists, from id: 3
+[  896.409326] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  896.661430] NOFEL: in Request lists, from id: 4
+[  896.661433] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  896.689441] NOFEL: in Request lists, from id: 3
+[  896.689443] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  897.365741] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  897.401743] NOFEL: in Request lists, from id: 4
+[  897.401745] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  898.366150] NOFEL: in Request lists, from id: 3
+[  898.366154] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  898.402161] NOFEL: in Request lists, from id: 4
+[  898.402165] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  898.414162] NOFEL: in Request lists, from id: 3
+[  898.414164] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  899.366567] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  899.402579] NOFEL: in Request lists, from id: 4
+[  899.402581] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  899.858724] NOFEL: in Request lists, from id: 3
+[  899.858729] NOFEL: KVM_REQ_EVENTNOFEL: in Request lists, from id: 3
+[  900.366993] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  900.403005] NOFEL: in Request lists, from id: 4
+[  900.403008] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  900.418999] NOFEL: in Request lists, from id: 3
+[  900.419001] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  900.467289] NOFEL: kvm_x86_ops->tlb_flush(vcpu)
+[  900.663100] NOFEL: in Request lists, from id: 4
+[  900.663102] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  900.691111] NOFEL: in Request lists, from id: 3
+[  900.691113] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  901.367409] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  901.403411] NOFEL: in Request lists, from id: 4
+[  901.403413] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  901.923649] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  901.977209] NOFEL: in Request lists, from id: 3
+[  901.977211] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  902.367823] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  902.403830] NOFEL: in Request lists, from id: 4
+[  902.403832] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  902.423835] NOFEL: in Request lists, from id: 3
+[  902.423837] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  903.368243] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  903.404246] NOFEL: in Request lists, from id: 4
+[  903.404248] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  903.436256] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  903.536297] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  903.788405] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  904.136560] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  904.368656] NOFEL: in Request lists, from id: 3
+[  904.368659] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  904.404667] NOFEL: in Request lists, from id: 4
+[  904.404670] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  904.428672] NOFEL: in Request lists, from id: 3
+[  904.428674] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  904.468947] NOFEL: kvm_x86_ops->tlb_flush(vcpu)
+[  904.492699] NOFEL: in Request lists, from id: 4
+[  904.492701] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  904.664771] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  904.692781] NOFEL: in Request lists, from id: 3
+[  904.692783] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  905.369078] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  905.405081] NOFEL: in Request lists, from id: 4
+[  905.405084] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  905.741223] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  906.369489] NOFEL: in Request lists, from id: 3
+[  906.369491] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  906.405499] NOFEL: in Request lists, from id: 4
+[  906.405502] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  906.433508] NOFEL: in Request lists, from id: 3
+[  906.433509] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 3
+[  906.669933] NOFEL: kvm_x86_ops->tlb_flush(vcpu)NOFEL: in Request lists, from id: 3
+[  907.369908] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  907.405923] NOFEL: in Request lists, from id: 4
+[  907.405926] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  907.670308] NOFEL: in Request lists, from id: 3
+[  907.670311] NOFEL: kvm_x86_ops->tlb_flush(vcpu)
+[  908.100830] NOFEL: in Request lists, from id: 4
+[  908.100834] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  908.100851] NOFEL: in Request lists, from id: 3
+[  908.100853] NOFEL: KVM_REQ_EVENT
+[  908.110263] NOFEL: in Request lists, from id: 4
+[  908.110266] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  908.110460] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  908.110831] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  908.110892] NOFEL: in Request lists, from id: 4
+[  908.110894] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  908.110927] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  908.111021] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  908.406347] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)
+[  908.666443] NOFEL: in Request lists, from id: 4
+[  908.666445] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  909.406751] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  910.407169] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  911.231626] NOFEL: KVM_REQ_DEACTIVATE_FPUNOFEL: record_steal_time(vcpu)NOFEL: in Request lists, from id: 4
+[  911.231680] NOFEL: KVM_REQ_EVENT

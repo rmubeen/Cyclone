@@ -1,0 +1,42 @@
+# get dpids of all bridges on m1
+rb_dpid=$(sudo ovs-ofctl show rb | grep -Po '(?<=dpid:).+')
+gb_dpid=$(sudo ovs-ofctl show gb | grep -Po '(?<=dpid:).+')
+bb_dpid=$(sudo ovs-ofctl show bb | grep -Po '(?<=dpid:).+')
+echo $rb_dpid
+
+printf "\nPort of vm1 on m1\n"
+m1_int3_name=$(virsh dumpxml vm1 | grep -oP "vnet\d+")
+m1_int3_port=$(sudo ovs-vsctl get Interface $m1_int1_name ofport)
+echo $m1_int3_name
+echo $m1_int3_port
+
+printf "\nPort of vm2 on m1\n"
+m1_int4_name=$(virsh dumpxml vm2 | grep -oP "vnet\d+")
+m1_int4_port=$(sudo ovs-vsctl get Interface $m1_int2_name ofport)
+echo $m1_int4_name
+echo $m1_int4_port
+
+
+printf "\nPorts of vm3 on m1\n"
+m1_vm3_ints=$(virsh dumpxml vm3 | grep -oP "vnet\d+")
+m1_vm3_ints_names=($m1_vm3_ints)
+
+m1_int0_port=$(sudo ovs-vsctl get Interface ${m1_vm3_ints_names[0]} ofport)
+m1_int1_port=$(sudo ovs-vsctl get Interface ${m1_vm3_ints_names[1]} ofport)
+m1_int2_port=$
+(sudo ovs-vsctl get Interface ${m1_vm3_ints_names[2]} ofport)
+
+echo ${m1_vm3_ints_names[0]}
+echo ${m1_vm3_ints_names[1]}
+echo ${m1_vm3_ints_names[2]}
+echo $m1_int3_name
+echo $m1_int34name
+
+
+echo $m1_int0_port
+echo $m1_int1_port
+echo $m1_int2_port
+echo $m1_int3_port
+echo $m1_int4_port
+
+printf "\n"

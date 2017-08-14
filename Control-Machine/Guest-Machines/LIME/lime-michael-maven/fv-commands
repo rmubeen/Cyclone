@@ -1,0 +1,47 @@
+make
+sudo make fvuser=flowvisor fvgroup=flowvisor install
+
+
+# or with pull
+git pull && make && sudo make fvuser=flowvisor fvgroup=flowvisor install
+
+
+# to run flowvisor
+sudo -u flowvisor flowvisor 
+
+# add slice
+fvctl add-slice slice1 tcp:128.138.201.93:6633 murad.kaplan@gmail.com
+
+# to create a general flowspace for all switches
+fvctl add-flowspace flow1 all 100 any slice1=7
+
+
+# to load from cong.json (flowvisor has to be running and not connected to the switches yet, then restart it)
+# also, make sure to reinstall flowvisor! because slices and flowspaces seem to be ereased when loading a new config.json file
+fvconfig load /etc/flowvisor/config.json
+
+
+# mininet
+# create link on fly
+py net.addLink(net.get('s3'), net.get('s6'))
+py s3.attach('s3-eth4')
+py s3.detach('s3-eth4')
+
+// Be careful of FlowMod' length when modyfing it!!!!
+
+// best so far for ovx testbed // attaching clone switch to second interface in hosts even before cloning start
+// in mininet script
+py net.get('h2_s8').cmd('ifconfig h2_s8-eth1 10.2') 
+py net.get('h2_s8').cmd('ifconfig h2_s8-eth1 down')
+py net.get('h2_s8').cmd('ifconfig h2_s8-eth1 hw ether 00:00:00:00:08:02')
+py net.get('h2_s8').cmd('ifconfig h2_s8-eth1 up')
+
+xterm h1_s8 h2_s8   
+py net.get('h2_s8').cmd('ifconfig h2_s8-eth0 down') // in mininet CLI
+python ovxctl.py -n startPort 1 00:a4:23:05:00:00:00:05 2
+
+// lime only testbed
+py net.get('h2_s2').cmd('ifconfig h2_s2-eth0 down')
+py net.get('h2_s2').cmd('ifconfig h2_s2-eth1 up')
+
+

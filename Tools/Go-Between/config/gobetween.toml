@@ -1,0 +1,238 @@
+#
+# gobetween.toml - sample config file
+#
+# Website: http://gobetween.io
+# Documentation: https://github.com/yyyar/gobetween/wiki/Configuration
+#
+
+
+#
+# Logging configuration
+#
+[logging]
+level = "info"   # "debug" | "info" | "warn" | "error"
+output = "stdout" # "stdout" | "stderr" | "/path/to/gobetween.log"
+
+
+#
+# REST API server configuration
+#
+[api]
+enabled = true  # true | false
+bind = ":8888"  # "host:port"
+cors = false    # cross-origin resource sharing
+
+#  [api.basic_auth]   # (optional) Enable HTTP Basic Auth
+#  login = "admin"    # HTTP Auth Login
+#  password = "1111"  # HTTP Auth Password
+
+#  [api.tls]                        # (optional) Enable HTTPS
+#  cert_path = "/path/to/cert.pem"  # Path to certificate
+#  key_path = "/path/to/key.pem"    # Path to key
+
+
+#
+# Default values for server configuration, may be overriden in [servers] sections.
+# All "duration" fields (for examole, postfixed with '_timeout') have the following format:
+# <int><duration> where duration can be one of 'ms', 's', 'm', 'h'.
+# Examples: "5s", "1m", "500ms", etc. "0" value means no limit
+#
+[defaults]
+max_connections = 1              # Maximum simultaneous connections to the server
+client_idle_timeout = "1"        # Client inactivity duration before forced connection drop
+backend_idle_timeout = "1"       # Backend inactivity duration before forced connection drop
+backend_connection_timeout = "1" # Backend connection timeout (ignored in udp)
+
+
+#
+# Servers contains as many [server.<name>] sections as needed.
+#
+[servers]
+
+# ---------- tcp example ----------- #
+
+[servers.sample]
+protocol = "tcp"
+bind = "localhost:3000"
+
+  [servers.sample.discovery]
+  kind = "static"
+  static_list = [
+      "localhost:8000",
+      "localhost:8001"
+  ]
+
+
+# ---------- udp example ----------- #
+
+[servers.udpsample]
+bind = "localhost:4000"
+protocol = "udp"
+balance = "roundrobin"
+
+  [servers.udpsample.udp]
+  max_responses = 1
+
+  [servers.udpsample.discovery]
+  kind = "static"
+  static_list = [
+      "127.0.0.1:11000",
+      "127.0.0.1:12000"
+  ]
+
+#
+# -------------------- example ----------------------------- #
+
+##
+## Example server section.
+##
+
+#[servers.default]
+#
+#bind = "localhost:3000"     #  (required) "<host>:<port>"
+#protocol = "tcp"            #  (required) "tcp" | "tls" | "udp"
+#balance = "weight"          #  (optional [weight]) "weight" | "leastconn" | "roundrobin" | "iphash" | "leastbandwidth"
+#
+#max_connections = 0
+#client_idle_timeout = "10m"
+#backend_idle_timeout = "10m"
+#backend_connection_timeout = "5s"
+#
+## ---------------- backends tls properties ----------------- #
+#
+#  [servers.default.backends_tls]      # (optional) backends tls options (if present -- conntect to backends via tls)
+#    ignore_verify = false             # (optional) insecure, disable tls certificate verification while connecting to backends
+#    root_ca_cert_path = "/path/to/file.pem" # (optional) path to series of root PEM encoded certificates.
+#                                              By default the host's root CA set is used (on many linux distros it's /etc/ssl/cert.pem)
+#                                      # Client certificate used by gobetween to make authenticated requests to backends.
+#                                      # Use this only if required by backends
+#    cert_path = "/path/to/file.crt"   # (optional) path to crt file
+#    key_path = "/path/to/file.key"    # (optional) path to key file
+#    min_version = "tls1"              # (optional) "ssl3" | "tls1" | "tls1.1" | "tls1.2" - minimum allowed tls version
+#    max_version = "tls1.2"            # (optional) maximum allowed tls version
+#    ciphers = []                      # (optional) list of supported ciphers. Empty means all supported. For a list see https://golang.org/pkg/crypto/tls/#pkg-constants
+#    prefer_server_ciphers = false     # (optional) if true server selects server's most preferred cipher
+#    session_tickets = true            # (optional) if true enables session tickets
+#
+#
+## ---------------------- sni properties --------------------- #
+#
+# [servers.default.sni]                    # (optional)
+# read_timeout = "2s"                      # (optional) timeout for reading sni from client
+# hostname_matching_strategy = "exact"     # (optional) "exact" | "regexp" if regexp, then match using regular expression associated with backend.
+# unexpected_hostname_strategy = "default" # (optional) "default" | "reject" | "any" strategy for dealing with unknown hostname requests
+#                                          #    "default" -- forward connections to backends with no sni tag
+#                                          #    "reject" -- drop connection
+#                                          #    "any" -- forward to any available backend
+#
+#
+## ---------------------- tls properties --------------------- #
+#
+#  [servers.default.tls]             # (required) if protocol == "tls"
+#  cert_path = "/path/to/file.crt"   # (required) path to crt file
+#  key_path = "/path/to/file.key"    # (required) path to key file
+#  min_version = "tls1"              # (optional) "ssl3" | "tls1" | "tls1.1" | "tls1.2" - minimum allowed tls version
+#  max_version = "tls1.2"            # (optional) maximum allowed tls version
+#  ciphers = []                      # (optional) list of supported ciphers. Empty means all supported. For a list see https://golang.org/pkg/crypto/tls/#pkg-constants
+#  prefer_server_ciphers = false     # (optional) if true server selects server's most preferred cipher
+#  session_tickets = true            # (optional) if true enables session tickets
+#
+#
+## ---------------------- udp properties --------------------- #
+#  [servers.default.udp]             # (optional)
+#  max_responses = 0                 # (required) if > 0 accepts no more responses that max_responses from backend and closes session
+#
+#
+## -------------------- access management -------------------- #
+#
+#  [servers.default.access]  # (optional)
+#  default = "allow"         # (required) default access order
+#  rules = [                 # (required) list of access rules in
+#    "deny 127.0.0.1",       #   the following format: <deny|allow> <ip|network>
+#    "deny 192.168.0.1",     #   are checked in sequence until match,
+#    "allow 192.168.0.1/24"  #   if no match, use 'default' order. ipv4 and ipv6 are supported
+#  ]
+#
+## -------------------- healthchecks ------------------------- #
+#
+#  [servers.default.healthcheck]   # (optional)
+#  interval = "2s"                 # (required) healthcheck running interval
+#  timeout = "0s"                  # (required) max time for healthcheck to execute until mark as failed
+#  fails = 1                       # (optional) successfull checks to mark backend as inactive
+#  passes = 1                      # (optional) successfull checks to mark backend as active
+#
+#  # -- ping -- #
+#  kind = "ping"                   # Unavailable if server.protocol is udp
+#
+#  # -- exec -- #
+#  kind = "exec"
+#  exec_command = "/path/to/healthcheck.sh"      # (required) command to execute
+#  exec_expected_positive_output = "1"           # (required) expected output of command in case of success
+#  exec_expected_negative_output = "0"           # (required) expected output of command in case of failure
+#
+## -------------------- discovery ---------------------------- #
+#
+#  [servers.default.discovery]      # (required)
+#  failpolicy = "keeplast"          # (optional) "keeplast" | "setempty" - what to do with backends if discovery fails
+#  interval = "0s"                  # (required) backends cache invalidation interval; 0 means never.
+#  timeout = "5s"                   # (optional) max time to wait for discover until falling to failpolicy
+#
+#  # -- static -- #
+#  kind = "static"
+#  static_list = [                       #  (required)  [
+#      "localhost:8000 weight=5",        #    "<host>:<port> weight=<int>" weight=1 by default
+#      "localhost:8001 sni=www.foo.com"  #  ]
+#  ]
+#
+#  # -- srv -- #
+#  kind = "srv"
+#  srv_lookup_server = "some.server:53"   # (required) "<host:port>"
+#  srv_lookup_pattern = "some.service."   # (required) lookup service
+#  srv_dns_protocol = "udp"               # (optional) protocol to use for dns lookup
+#
+#  # -- docker -- #
+#  kind = "docker"
+#  docker_endpoint = "http://localhost:2375" # (required) Endpoint to docker API
+#  docker_container_private_port = 80        # (required) Private port of container to use
+#  docker_container_label = "proxied=true"   # (optional) Label to filter containers
+#  docker_container_host_env_var = ""        # (optional) Take container host from container env variable
+#
+#  docker_tls_enabled = false                 # (optional) enable client tls auth
+#  docker_tls_cert_path = '/path/to/cert.pem' # (optional) key and cert should be specified together, or both left not specified
+#  docker_tls_key_path = '/path/to/key.pem'   # (optional)
+#  docker_tls_cacert_path = '/path/to/cacert.pem' # (optional) if not specified, docker endpoint tls verification will be skipped (insecure!)
+#
+#  # -- json -- #
+#  kind = "json"
+#  json_endpoint = "http://some.url.com"   # (required) JSON discovery Url
+#  json_host_pattern = "host"              # (optional) path to host value in JSON object, by default "host"
+#  json_port_pattern = "port"              # (optional) path to port value in JSON object, by default "port"
+#  json_weight_pattern = "weight"          # (optional) path to weight value in JSON object, by default "weight"
+#  json_priority_pattern = "priority"      # (optional) path to priority value in JSON object, by default "priority"
+#  json_sni_pattern = "sni"                # (optional) path to SNI value in JSON object, by default "sni"
+#
+#  # -- exec -- #
+#  kind = "exec"
+#  exec_command = ["/path/to/script", "arg1", "arg2"] # (required) command to exec and variable-length arguments
+#
+#  # -- plaintext -- #
+#  kind = "plaintext"
+#  plaintext_endpoint = "http://some.url.com"   # (required) Url to plain text discovery
+#  plaintext_regex_pattern = ""                 # (optional) Regex with named capturing groups
+#
+#  # -- consul -- #
+#  kind = "consul"
+#  consul_host = "localhost:8500"       # (required) Consul host:port
+#  consul_service_name = "myservice"    # (required) Service name
+#  consul_service_tag = ""              # (optional) Service tag
+#  consul_service_passing_only = true   # (optional) Get only services with passing healthchecks
+#  consul_service_datacenter = ""       # (optional) Datacenter to use
+#
+#  consul_auth_username = ""   # (optional) HTTP Basic Auth username
+#  consul_auth_password = ""   # (optional) HTTP Basic Auth password
+#
+#  consul_tls_enabled = true                      # (optional) enable client tls auth
+#  consul_tls_cert_path = "/path/to/cert.pem"
+#  consul_tls_key_path = "/path/to/key.pem"
+#  consul_tls_cacert_path = "/path/to/cacert.pem"
+#

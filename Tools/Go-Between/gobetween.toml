@@ -1,0 +1,52 @@
+# Logging configuration
+[logging]
+level = "info"   # "debug" | "info" | "warn" | "error"
+output = "stdout" # "stdout" | "stderr" | "/path/to/gobetween.log"
+
+# REST API server configuration
+[api]
+enabled = true  # true | false
+bind = ":8888"  # "host:port"
+cors = false    # cross-origin resource sharing
+
+# Default values for server configuration, may be overriden in [servers] sections.
+[defaults]
+max_connections = 1              # Maximum simultaneous connections to the server
+client_idle_timeout = "3"        # Client inactivity duration before forced connection drop
+backend_idle_timeout = "3"       # Backend inactivity duration before forced connection drop
+backend_connection_timeout = "3" # Backend connection timeout (ignored in udp)
+
+# Servers contains as many [server.<name>] sections as needed.
+[servers]
+
+# ---------- tcp load-balancer ----------- #
+
+[servers.tcploadbalancer]
+protocol = "tcp"
+bind = "localhost:8000"
+balance = "roundrobin"
+
+  [servers.tcploadbalancer.discovery]
+  kind = "static"
+  static_list = [
+      "127.0.0.1:9000",
+      "127.0.0.1:10000"
+  ]
+
+
+# ---------- tcp load-balancer ----------- #
+
+[servers.udploadbalancer]
+bind = "localhost:11000"
+protocol = "udp"
+balance = "roundrobin"
+
+  [servers.udploadbalancer.udp]
+  max_responses = 1
+
+  [servers.udploadbalancer.discovery]
+  kind = "static"
+  static_list = [
+      "127.0.0.1:12000",
+      "127.0.0.1:13000"
+  ]
